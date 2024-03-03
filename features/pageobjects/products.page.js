@@ -4,7 +4,7 @@ const Page = require('./page');
 
 class productsPage extends Page {
   /**
-   * This page has locators of products page of swag labs website
+   * This page contains selectors and methods for a products page
    */
   get pageHeading() {
     return $('//*[@class="product_label"]');

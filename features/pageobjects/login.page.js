@@ -2,7 +2,7 @@ const { $ } = require('@wdio/globals')
 const Page = require('./page');
 
 /**
- * sub page containing specific selectors and methods for a specific page
+ * This page contains selectors and methods for a login page
  */
 class LoginPage extends Page {
     /**

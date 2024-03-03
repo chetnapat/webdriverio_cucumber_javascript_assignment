@@ -1,7 +1,7 @@
 const { $ } = require('@wdio/globals')
 
 /**
- * sub page containing specific selectors and methods for a specific page
+ * This page contains selectors and methods for a checkout page
  */
 class CheckoutPage {
     /**

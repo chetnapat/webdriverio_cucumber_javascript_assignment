@@ -1,8 +1,9 @@
-Feature: The Internet Guinea Pig Website
+Feature: The Swag Labs Website
 
-  @main
-  Scenario Outline: As a user, I can log into the secure area
+  Background: 
     Given I am on the login page
+
+  Scenario Outline: Check login functionality with valid credentials
     When I login with <username> and <password>
     Then user should navigate to products page
 
@@ -10,7 +11,7 @@ Feature: The Internet Guinea Pig Website
       | username      | password     |
       | standard_user | secret_sauce |
 
-  Scenario Outline: Check login with invalid credentials
+  Scenario Outline: Check login functionality with invalid credentials
     When user login with <username> and <password>
     Then user should see error <message>
 
@@ -31,7 +32,8 @@ Feature: The Internet Guinea Pig Website
       | username      | password     |
       | standard_user | secret_sauce |
 
-  Scenario Outline: Check Add to cart Functionality
+  @E2E
+  Scenario Outline: Check user is able to place order
     When user login with <username> and <password>
     Then user should navigate to products page
     When user click on first product

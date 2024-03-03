@@ -2,12 +2,8 @@ const { Given, When, Then } = require('@wdio/cucumber-framework');
 const { expect, $ } = require('@wdio/globals')
 const LoginPage = require('../pageobjects/login.page');
 const productsPage = require('../pageobjects/products.page');
-const { logger } = require('../CommonUtilities/winstonLogger');
 const cartPage = require('../pageobjects/cart.page');
 const checkoutPage = require('../pageobjects/checkout.page');
-const pages = {
-    login: LoginPage
-}
 
 Given(/^I am on the (\w+) page$/, async (page) => {
     await LoginPage.open()
@@ -19,7 +15,6 @@ When(/^I login with (\w+) and (.+)$/, async (username, password) => {
 
 Then(/^user should navigate to products page$/, async () => {
 	const pageHeading = await productsPage.getPageHeading();
-    // logger.info("pageHeading : " + pageHeading);
     console.log('Products page heading is : ' + pageHeading);
     expect(pageHeading).toEqual("Products");
 });

@@ -1,7 +1,7 @@
 const { $ } = require('@wdio/globals')
 
 /**
- * sub page containing specific selectors and methods for a specific page
+ * This page contains selectors and methods for a cart page
  */
 class YourCartPage {
     /**
@@ -18,11 +18,6 @@ class YourCartPage {
     get productNameOnYourCartPage () {
         return $('//*[@class="title"]');
     }
-
-    /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
 
     async clickOnCheckoutBtn() {
         (await this.checkoutButton).waitForDisplayed({
