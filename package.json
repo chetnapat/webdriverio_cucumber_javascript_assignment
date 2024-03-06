@@ -1,6 +1,7 @@
 {
   "name": "webdriveriocucumberjavascript",
   "version": "1.0.0",
+  "type": "module",
   "description": "webdriverio cucumber assignment",
   "main": "index.js",
   "scripts": {
@@ -10,6 +11,7 @@
   "author": "Chetana Patil",
   "license": "ISC",
   "dependencies": {
+    "@cucumber/cucumber": "^10.3.1",
     "@types/chai": "^4.3.12",
     "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@wdio/cli": "^8.32.3",
